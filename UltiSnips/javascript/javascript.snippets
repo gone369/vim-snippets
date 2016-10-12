@@ -31,11 +31,28 @@ snippet proto "Prototype (proto)"
 ${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
 	${VISUAL}$0
 };
+endsnippet
+snippet switch "switch(){...}" b
+switch(${1:input}){
+	case $2:
+		$3
+		break;
+	default:
+		$4
+}
+endsnippet
 
+snippet case "case: break;" b
+case ${1:${VISUAL}}:
+	break;
+endsnippet
+
+snippet var "var ___ = ___;" b
+var ${1:name} = ${2:value};
 endsnippet
 
 snippet for "for (...) {...} (counting up)" b
-for (var ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {
+for (var ${1:i} = 0; $1 < $2; $1++) {
 	${VISUAL}$0
 }
 endsnippet
@@ -65,9 +82,9 @@ function($1) {
 endsnippet
 
 snippet iife "Immediately-Invoked Function Expression (iife)"
-(function(${1:window}) {
+(function(${1:window}){
 	${VISUAL}$0
-}(${2:$1}));
+})(${2:$1});
 endsnippet
 
 snippet timeout "setTimeout function"
@@ -103,7 +120,7 @@ console.dirxml(${1:object});
 endsnippet
 
 snippet ce "console.error" b
-console.error(${1:"${2:value}"});
+console.error(${1:${2:value}});
 endsnippet
 
 snippet cgroup "console.group" b
@@ -119,15 +136,15 @@ console.groupEnd();
 endsnippet
 
 snippet ci "console.info" b
-console.info(${1:"${2:value}"});
+console.info(${1:${2:value}});
 endsnippet
 
 snippet cl "console.log" b
-console.log(${1:"${2:value}"});
+console.log(${1:${2:value}});
 endsnippet
 
 snippet cd "console.debug" b
-console.debug(${1:"${2:value}"});
+console.debug(${1:${2:value}});
 endsnippet
 
 snippet cprof "console.profile" b
@@ -137,7 +154,7 @@ console.profileEnd();
 endsnippet
 
 snippet ctable "console.table" b
-console.table(${1:"${2:value}"});
+console.table(${1:${2:value}});
 endsnippet
 
 snippet ctime "console.time" b
@@ -155,7 +172,7 @@ console.trace();
 endsnippet
 
 snippet cw "console.warn" b
-console.warn(${1:"${2:value}"});
+console.warn(${1:${2:value}});
 endsnippet
 
 # AMD (Asynchronous Module Definition) snippets

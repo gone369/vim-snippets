@@ -1,0 +1,41 @@
+snippet => "es6 =>{...}" b
+($1) => {
+	$2
+}
+endsnippet
+
+snippet const "es6 const ___ = ___;" b
+const ${1:name} = ${2:value};
+endsnippet
+
+snippet let "es6 let ___ = ___;" b
+let ${1:name} = ${2:value};
+endsnippet
+
+snippet .map "es6 .map(()=>{...})" b
+${1:${VISUAL:name}}.map((${2:item},${3:index}){
+	$4
+}
+endsnippet
+
+snippet .reduce "es6 .reduce((prev,cur,index,array)=>{...})" b
+${1:${VISUAL:name}}.reduce((${2:previousValueOrSum},${3:currentValue},${4:currentIndex},${5:originalArray})=>{
+	$7
+},${6:initialValue})
+endsnippet
+
+snippet obja "es6 Object.assign({},...)" b
+Object.assign(${1:{}},$2);
+endsnippet
+
+snippet bindm "es6 this.method = this.method.bind(this)" b
+this.${1:${VISUAL:method}} = this.$1.bind(${2:this});
+endsnippet
+
+snippet class "es6 class ... { constructor(){...} }" b
+class ${1:${VISUAL:ClassName}}{
+	constructor(...args){
+		$2
+	}
+}
+endsnippet

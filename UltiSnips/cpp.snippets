@@ -71,3 +71,10 @@ public:
 #endif /* $2 */
 endsnippet
 # vim:ft=snippets:
+
+snippet hg
+#ifndef ${1:`!v substitute(vim_snippets#Filename('$1_H','ClassName'),'.*','\U&\E','')`}
+$2
+#define $1
+#endif /* $1 */
+endsnippet
