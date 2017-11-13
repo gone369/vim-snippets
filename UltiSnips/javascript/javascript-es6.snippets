@@ -39,3 +39,15 @@ class ${1:${VISUAL:ClassName}}{
 	}
 }
 endsnippet
+
+snippet import "import foo from 'foo'" b
+import ${1:${VISUAL:module}} from "${2:$1}";
+endsnippet
+
+snippet importf "import foo from './foo/foo.js'" b
+import ${1:${VISUAL:module}} from "./$1/$1.js";
+endsnippet
+
+snippet exportd "export { default as foo } from './foo/foo.js'" b
+export { default as ${1:${VISUAL:module}} from "./$1/$1.js";
+endsnippet

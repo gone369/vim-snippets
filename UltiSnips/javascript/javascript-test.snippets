@@ -1,0 +1,12 @@
+snippet describe "describe('...',()=>{})" b
+describe("${1:description}",()=>{
+	${2:it}
+})
+endsnippet
+
+snippet it "it('...',()=>{})" b
+describe("${1:should do foo}",()=>{
+	$2
+	expect(true).to.be.true;
+})
+endsnippet
